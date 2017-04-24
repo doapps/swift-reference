@@ -17,6 +17,7 @@ Lorem
 │  │  └─ Storage
 │  │  └─ View
 │  │  └─ Resources
+│  │  └─ InAppPurchase
 │  ├─ AppNameTests
 │  ├─ AppNameUITests
 
@@ -100,3 +101,14 @@ Lorem
 
 
 ```
+
+### Estructura - InAppPurchase
+```
+* Esta carpeta contiene todo lo relacionado los componentes relacionados con StoreKit framework
+
+├─ InAppPurchase
+│  └─ *
+
+
+```
+
