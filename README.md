@@ -89,15 +89,39 @@ Lorem
 
 ```
 
+### Estructura - Resources
+```
+* Esta carpeta contiene todos los assest externos de la app, tales como imágenes, fonts y property list.
+
+├─ Resources
+│  └─ Assets.xcassets
+│  └─ Fonts
+│  └─ Files
+
+```
 
 ### Estructura - View
 ```
 * Esta carpeta contiene todo lo relacionado a almacenamiento local.
+* Sotryboard: Considerar la grupación de UIViewController por módulos, y por cada módulo crear un .storyboard.
+* Folder: hace referencia a la agrupación de vistas customizadas dentro de un ViewController
+* General: contiene los componentes customizados que se reutilizan en todas la aplicación o en más de un ViewController.
+* En el caso de los elementos tales como botones y labels el nombre será a discreción del desarrollador(redButton, redRegularButton, etc).
+
 
 ├─ View
 │  └─ Storyboard
-│  └─ Cell
-│  └─ Assets
+│      └─ LaunchScreen.storyboard
+│      └─ Main.storyboard
+│  └─ Custom
+│      └─ Folder
+│          └─ Cell
+│          └─ Button
+│          └─ Alert
+│      └─ General
+│          └─ Cell
+│          └─ Button
+│          └─ Alert
 
 
 ```
