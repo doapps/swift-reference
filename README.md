@@ -136,3 +136,83 @@ Lorem
 
 ```
 
+
+## Estructura de un ViewController
+
+```
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    
+	//MARK: - Constraints outlets
+    @IBOutlet weak var elementBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var elementTopConstraint: NSLayoutConstraint!
+    
+
+	//MARK: - View outlets
+    @IBOutlet weak var elementTextField: CustomTextField!
+    @IBOutlet weak var elementButton: CustomRegisterButton!
+    @IBOutlet weak var elementView: UIView!
+
+	//MARK: - Local constans and variables
+    let thisIsAConstant = 20.0
+    var thisIsAVariable = 15
+    
+	//MARK: - ViewController override definitions
+	override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        
+    }
+    override func viewWillLayoutSubviews() {
+       
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+	//MARK: - Actions and other outlets remaining
+    @IBAction func excuteRegister(_ sender: Any) {
+        
+    }
+    
+	//MARK: - Additional functions that may be require
+    func myAwesomeFunctionImplementation(){
+        
+    }
+    
+    func allowRegister(byUser user:User, andProfile profile:Profile) -> Bool{
+        
+        return true
+    }
+}
+
+```
+
+
+## Estructura de un Modelo
+
+```
+class Car{
+    
+    //MARK: Properties
+    var name: String
+    var age: Int
+    
+    //MARK: Initialization
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+    
+    //MARK: Methods
+    func awesomeFunction(){
+        
+    }
+    
+}
+
+```
