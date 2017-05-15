@@ -114,10 +114,10 @@ Lorem
 │     └─ Cell
 │        └─ .swift
 │        └─ .xib
-│   └─ General
-│       └─ Cell
-│       └─ Button
-│       └─ Alert
+│  └─ General
+│     └─ Cell
+│     └─ Button
+│     └─ Alert
 
 
 ```
