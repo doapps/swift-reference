@@ -16,6 +16,7 @@ Lorem
 │  │  └─ Controller
 │  │  └─ Storage
 │  │  └─ View
+│  │  └─ Storyboard
 │  │  └─ Resources
 │  │  └─ InAppPurchase
 │  ├─ AppNameTests
@@ -102,26 +103,34 @@ Lorem
 
 ### Estructura - View
 ```
-* Esta carpeta contiene todo lo relacionado a almacenamiento local.
-* Sotryboard: Considerar la grupación de UIViewController por módulos, y por cada módulo crear un .storyboard.
-* Folder: hace referencia a la agrupación de vistas customizadas dentro de un ViewController
+
+* Folder: hace referencia a la agrupación de vistas customizadas dentro de un Storyboard
 * General: contiene los componentes customizados que se reutilizan en todas la aplicación o en más de un ViewController.
 * En el caso de los elementos tales como botones y labels el nombre será a discreción del desarrollador(redButton, redRegularButton, etc).
 
 
 ├─ View
-│  └─ Storyboard
-│      └─ LaunchScreen.storyboard
-│      └─ Main.storyboard
-│  └─ Custom
-│      └─ Folder
-│          └─ Cell
-│          └─ Button
-│          └─ Alert
-│      └─ General
-│          └─ Cell
-│          └─ Button
-│          └─ Alert
+│  └─ Folder
+│     └─ Cell
+│        └─ .swift
+│        └─ .xib
+│   └─ General
+│       └─ Cell
+│       └─ Button
+│       └─ Alert
+
+
+```
+
+### Estructura - Storyboard
+```
+
+* Sotryboard: Considerar la grupación de UIViewController por módulos, y por cada módulo crear un .storyboard.
+
+
+├─ Storyboard
+│  └─ LaunchScreen.storyboard
+│  └─ Main.storyboard
 
 
 ```
