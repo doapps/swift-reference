@@ -1,6 +1,6 @@
 # Buenas prácticas de desarrollo Swift
 
-Lorem
+La estructura que se desarrolla a continuación permitirá una correcta organización y reutilización de los componentes de software embebidos en un proyecto generado por Xcode
 
 
 ## Estructura del proyecto
@@ -26,7 +26,8 @@ Lorem
 
 ### Estructura - Helper
 ```
-* Esta carpeta contiene bibliotecas de terceros y utilitarios.
+* Esta carpeta contiene bibliotecas y utilitarios que pueden ser de terceros o propios del desarrollador. Los nombres de los utilitarios desarrollados deben de ser lo suficientemente explicitos en el nombre y exponer un comentario sobre su existencia.
+
 
 ├─ Helper
 │  ├─ Libs
@@ -37,15 +38,16 @@ Lorem
 ```
 * Esta carpeta contiene todo lo relacionado a consumo de servicios web o tareas asociadas a internet.
 ** En el caso de existir más una modalidad de consumo se crearán las carpetas respectivas.
-*** Se agruparán los servicios en relación al modelo asociado.
+*** Se creará una clase principal llamada EndPoints la cual contendra las urls usadas en el proyecto y luego se crearán extensiones de la clase mencionada que contengan la implementación de un método
 
 
 ├─ Networking
 │  ├─ Services
 │  |   ├─ Rest
-│  |   |   └─ ModelService.swift
+│  |   |   └─ EndPoints.swift
+│  |   |   └─ MethodName.swift
 │  |   └─ Soap
-│  |   |   └─ OtherService.swift
+│  |   |   └─ EndPoints.swift
 │  └─ Sockets
 │  |       └─ ModelSocket.swift
 
@@ -56,6 +58,7 @@ Lorem
 * Esta carpeta contiene todo los modelos y serán nombrado en su forma básica.
 
 ├─ Model
+│  └─ Protocol
 │  └─ Event.swift
 
 ```
@@ -71,7 +74,7 @@ Lorem
 
 ### Estructura - Controller
 ```
-* Esta carpeta contiene todo los ViewController y serán agrupados en carpetas a discreción.
+* Esta carpeta contiene todo los ViewController y serán agrupados en subcarpetas a discreción.
 
 ├─ Controller
 │  └─ NameViewController.swift
@@ -93,6 +96,7 @@ Lorem
 ### Estructura - Resources
 ```
 * Esta carpeta contiene todos los assest externos de la app, tales como imágenes, fonts y property list.
+** (Assets) Se crearán subcarpetas las cuales harán referencia a los storyboards existentes. Si un recurso es utilizado en mas de un storyboard deberá encontrarse en la carpeta llamada "General"
 
 ├─ Resources
 │  └─ Assets.xcassets
@@ -104,20 +108,14 @@ Lorem
 ### Estructura - View
 ```
 
-* Folder: hace referencia a la agrupación de vistas customizadas dentro de un Storyboard
-* General: contiene los componentes customizados que se reutilizan en todas la aplicación o en más de un ViewController.
-* En el caso de los elementos tales como botones y labels el nombre será a discreción del desarrollador(redButton, redRegularButton, etc).
+
+* Dentro de la carpeta View se crearan subcarpetas que haran referencia a los distintos componentes gráficos. Dentro de estas subcarpetas se crearán los archivos .swift y .xib según sea necesario.
 
 
 ├─ View
-│  └─ Folder
-│     └─ Cell
-│        └─ .swift
-│        └─ .xib
-│  └─ General
-│     └─ Cell
-│     └─ Button
-│     └─ Alert
+│  └─ Cell
+│  └─ Button
+│  └─ Alert
 
 
 ```
